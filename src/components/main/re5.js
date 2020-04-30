@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import axios from 'axios';
 
  class re5 extends Component {
@@ -34,11 +33,13 @@ import axios from 'axios';
         
       <div>
       {this.state.dataready?(<div className="content"> 
-      <h1>{this.state.residentEvil5.name}</h1> 
+      <div className="content2"><h1>{this.state.residentEvil5.name} ({this.state.residentEvil5.released.slice(0, 4)})</h1> 
       {this.state.residentEvil5.description_raw}
       <p>Achivements: {this.state.residentEvil5.achievements_count}</p>
       <p>Available on:</p>
-      
+     
+      </div>
+
       <video autoPlay muted loop id="myVideo">
           <source src={this.state.residentEvil5?.clip?.clip} type="video/mp4"/>
       </video>

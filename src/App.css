@@ -8,14 +8,17 @@
   height: 80px;
 }
 #myVideo {
-  position: fixed;
+  position: absolute;
   z-index: -1;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
 }
-
+.Navbar{
+z-index: 100;
+position: relative;
+}
 /* Add some content at the bottom of the video/page */
 .content {
   position: fixed;
@@ -25,7 +28,18 @@
   color: #f1f1f1;
   width: 100%;
   padding: 20px;
+
 }
+
+.content2 {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  padding: 20px;
+}
+
 
 /* Style the button used to pause/play the video */
 #myBtn {

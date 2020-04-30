@@ -33,18 +33,20 @@ class re1 extends Component {
         
       <div>
       {this.state.dataready?(<div className="content"> 
-      <h1>{this.state.residentEvil1.name} "{this.state.residentEvil1.released.slice(0, 4)}"</h1> 
+      <div className="content2"><h1>{this.state.residentEvil1.name} ({this.state.residentEvil1.released.slice(0, 4)})</h1> 
       {this.state.residentEvil1.description_raw}
       <p>Achivements: {this.state.residentEvil1.achievements_count}</p>
       <p>Available on:{this.state.residentEvil1.stores[0].store.name},{this.state.residentEvil1.stores[1].store.name},{this.state.residentEvil1.stores[2].store.name},{this.state.residentEvil1.stores[3].store.name}</p>
       
+      </div>
+
       <video autoPlay muted loop id="myVideo">
           <source src={this.state.residentEvil1?.clip?.clip} type="video/mp4"/>
       </video>
       </div>):("loading...")}
      
       </div>
-    );
+    )
   }
 }
 

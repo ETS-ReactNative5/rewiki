@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import axios from 'axios';
 
  class re3 extends Component {
@@ -33,11 +32,13 @@ import axios from 'axios';
     return (
         
       <div>
-      {this.state.dataready?(<div className="content3"> 
-      <h1>{this.state.residentEvil3.name}</h1> 
+      {this.state.dataready?(<div className="content"> 
+      <div className="content2"><h1>{this.state.residentEvil3.name} (1999)</h1> 
       <p>"Join Jill Valentine, the heroine and amazing survivor of the notorious disaster at the mansion, as her nightmare continues. The next terrifying drama from the blockbuster Resident Evil® Series. This unique adventure intricately reveals more of Umbrella Corporation’s nightmarish plot and picks up just hours before the events from Resident Evil® 2."</p>
       <p>Achivements: {this.state.residentEvil3.achievements_count}</p>
       <p>Available on:</p>
+      
+      </div>
       
       <video autoPlay muted loop id="myVideo">
           <source src={this.state.residentEvil3?.clip?.clip} type="video/mp4"/>

@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
 import axios from 'axios';
 
- class re7 extends Component {
+ class reuc extends Component {
   state={
-    residentEvil7:{},
+    residentEviluc:{},
     dataready:false
   }
     componentDidMount=()=>{
       axios({
             "method":"GET",
-            "url":"https://rawg-video-games-database.p.rapidapi.com/games/resident-evil-7-biohazard",
+            "url":"https://rawg-video-games-database.p.rapidapi.com/games/umbrella-corps",
             "headers":{
             "content-type":"application/octet-stream",
             "x-rapidapi-host":"rawg-video-games-database.p.rapidapi.com",
@@ -19,7 +18,7 @@ import axios from 'axios';
             })
             .then((response)=>{
               this.setState({
-                residentEvil:response.data,
+                residentEviluc:response.data,
                 dataready:true
               })
               console.log(response)
@@ -34,13 +33,15 @@ import axios from 'axios';
         
       <div>
       {this.state.dataready?(<div className="content"> 
-      <h1>{this.state.residentEvil7.name}</h1> 
-      {this.state.residentEvil7.description_raw}
-      <p>Achivements: {this.state.residentEvil7.achievements_count}</p>
+      <div className="content2"><h1>{this.state.residentEviluc.name} ({this.state.residentEviluc.released.slice(0, 4)})</h1> 
+      {this.state.residentEviluc.description_raw}
+      <p>Achivements: {this.state.residentEviluc.achievements_count}</p>
       <p>Available on:</p>
       
+      </div>
+
       <video autoPlay muted loop id="myVideo">
-          <source src={this.state.residentEvil7?.clip?.clip} type="video/mp4"/>
+          <source src="./corp.mp4" type="video/mp4"/>
       </video>
       </div>):("loading...")}
      
@@ -49,4 +50,4 @@ import axios from 'axios';
   }
 }
 
-export default re7;
+export default reuc;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import axios from 'axios';
 
  class reob extends Component {
@@ -10,7 +9,7 @@ import axios from 'axios';
     componentDidMount=()=>{
       axios({
             "method":"GET",
-            "url":"https://rawg-video-games-database.p.rapidapi.com/games/resident-evil-outbreak",
+            "url":"https://rawg-video-games-database.p.rapidapi.com/games/resident-evil-outbreak-file-2",
             "headers":{
             "content-type":"application/octet-stream",
             "x-rapidapi-host":"rawg-video-games-database.p.rapidapi.com",
@@ -34,13 +33,15 @@ import axios from 'axios';
         
       <div>
       {this.state.dataready?(<div className="content"> 
-      <h1>{this.state.residentEviloutbreak.name}</h1> 
+      <div className="content2"><h1>{this.state.residentEviloutbreak.name} ({this.state.residentEviloutbreak.released.slice(0, 4)})</h1> 
       {this.state.residentEviloutbreak.description_raw}
       <p>Achivements: {this.state.residentEviloutbreak.achievements_count}</p>
       <p>Available on:</p>
       
+      </div>
+      
       <video autoPlay muted loop id="myVideo">
-          <source src={this.state.residentEviloutbreak?.clip?.clip} type="video/mp4"/>
+          <source src="./outbreak.mp4" type="video/mp4"/>
       </video>
       </div>):("loading...")}
      

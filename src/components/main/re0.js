@@ -33,10 +33,12 @@ class re0 extends Component {
         
       <div>
       {this.state.dataready?(<div className="content"> 
-      <h1>{this.state.residentEvil0.name} "{this.state.residentEvil0.released.slice(0, 4)}"</h1> 
+      <div className="content2"><h1>{this.state.residentEvil0.name.slice(0, 15)} (2002)</h1> 
       {this.state.residentEvil0.description_raw}
       <p>Achivements: {this.state.residentEvil0.achievements_count}</p>
-      <p>Available on:{this.state.residentEvil0.stores[0].store.name},{this.state.residentEvil0.stores[1].store.name},{this.state.residentEvil0.stores[2].store.name},{this.state.residentEvil0.stores[3].store.name}</p>
+      <p>Available on:{this.state.residentEvil0.stores[0].store.name}</p>
+      
+      </div>
       
       <video autoPlay muted loop id="myVideo">
           <source src={this.state.residentEvil0?.clip?.clip} type="video/mp4"/>
