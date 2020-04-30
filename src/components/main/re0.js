@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class re0 extends Component {
   state={
@@ -37,6 +38,7 @@ class re0 extends Component {
       {this.state.residentEvil0.description_raw}
       <p>Achivements: {this.state.residentEvil0.achievements_count}</p>
       <p>Available on:{this.state.residentEvil0.stores[0].store.name}</p>
+      <button><Link to="/main">&laquo; Back</Link></button>
       
       </div>
       

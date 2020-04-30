@@ -4,17 +4,27 @@ import { Link } from 'react-router-dom';
 class side extends Component {
     render() {
         return (
-                <div className="content">
-                <li><Link to="/reob">Resident Evil Outbreak Files</Link></li>
-                <li><Link to="/rerc">Resident Evil Operation Raccoon City</Link></li>
-                <li><Link to="/rere">Resident Evil Revelations</Link></li>
-                <li><Link to="/rere2">Resident Evil Revelations 2</Link></li>
-                <li><Link to="/recu">Resident Evil Umbrella Chronicles</Link></li>
-                <li><Link to="/redc">Resident Evil Darkside Chronicles</Link></li>
-                <li><Link to="/reuc">Resident Evil Umbrella Corps</Link></li>
+        
+            <div className="content"><div className="content3">
+            <h1>Time to escape the city</h1>
+            <h2>Choose next destination</h2>
+                <Link to="/reob"><img src={"./outbreak.png"} /></Link>
+                <Link to="/rerc"><img src={"./raccoon.png"} /></Link>
+                <Link to="/rere"><img src={"./rev.png"} /></Link>
+                <Link to="/rere2"><img src={"./rev2.png"} /></Link>
+                <Link to="/recu"><img src={"./uc.png"} /></Link>
+                <Link to="/redc"><img src={"./dc.png"} /></Link>
+                <Link to="/reuc"><img src={"./umcorp.png"} /></Link>
 
-                <a href="#" class="previous">&laquo; Back</a>
+                <button><Link to="/">&laquo; Back</Link></button>
+                </div>
+                <video autoPlay muted loop id="myVideo">
+                    <source src="./train.mp4" type="video/mp4"/>
+                </video>
+               
+                                
             </div>
+            
             
         );
     }

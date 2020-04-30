@@ -24,7 +24,7 @@ position: relative;
   position: fixed;
   z-index: 1;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   color: #f1f1f1;
   width: 100%;
   padding: 20px;
@@ -39,7 +39,28 @@ position: relative;
   color: #f1f1f1;
   padding: 20px;
 }
+.content3 {
+  position: fixed;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  z-index: 1;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #f1f1f1;
+  padding: 20px;
+}
 
+ul,li
+{
+list-style-type: none;
+}
+.Button {
+  background:url("") no-repeat;
+  cursor:pointer;
+  width: 20px;
+  height: 20px;
+  border: none;
+}
 
 /* Style the button used to pause/play the video */
 #myBtn {

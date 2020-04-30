@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
  class reob extends Component {
   state={
@@ -38,6 +39,7 @@ import axios from 'axios';
       <p>Achivements: {this.state.residentEviloutbreak.achievements_count}</p>
       <p>Available on:</p>
       
+      <button><Link to="/side">&laquo; Back</Link></button>
       </div>
       
       <video autoPlay muted loop id="myVideo">
