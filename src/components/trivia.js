@@ -119,7 +119,7 @@ class trivia extends Component {
     
     </p>
     <p>
-      
+    Resident Evil Wiki is in no way supported, endorsed or affiliated in with Capcom. "Capcom", all associated names, images and trademarks are copyright of Capcom. No copyright infringement is intended.
     </p>
   </TimelineItem>
   
