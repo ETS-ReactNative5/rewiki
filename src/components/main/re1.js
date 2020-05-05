@@ -45,7 +45,7 @@ class re1 extends Component {
       <video autoPlay muted loop id="myVideo">
           <source src={this.state.residentEvil1?.clip?.clip} type="video/mp4"/>
       </video>
-      </div>):("loading...")}
+      </div>):<img src="./images/jill.gif" alt="loading"/>}
      
       </div>
     )

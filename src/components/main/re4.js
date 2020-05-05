@@ -35,7 +35,7 @@ import { Link } from 'react-router-dom';
       <div>
       {this.state.dataready?(<div className="content"> 
       <div className="content2"><h1>{this.state.residentEvil4.name} ({this.state.residentEvil4.released.slice(0, 4)})</h1> 
-      {this.state.residentEvil4.description_raw}
+      {this.state.residentEvil4.description_raw.slice(330,657)}
       <p>Achivements: {this.state.residentEvil4.achievements_count}</p>
       <p>Available on:</p>
       <button><Link to="/main">&laquo; Back</Link></button>
@@ -45,7 +45,7 @@ import { Link } from 'react-router-dom';
       <video autoPlay muted loop id="myVideo">
           <source src={this.state.residentEvil4?.clip?.clip} type="video/mp4"/>
       </video>
-      </div>):("loading...")}
+      </div>):<img src="./images/jill.gif" alt="loading"/>}
      
       </div>
     );

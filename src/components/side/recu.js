@@ -43,9 +43,9 @@ import { Link } from 'react-router-dom';
       </div>
       
       <video autoPlay muted loop id="myVideo">
-          <source src="./ubc.mp4" type="video/mp4"/>
+          <source src="./videos/ubc.mp4" type="video/mp4"/>
       </video>
-      </div>):("loading...")}
+      </div>):<img src="./images/jill.gif" alt="loading"/>}
      
       </div>
     );

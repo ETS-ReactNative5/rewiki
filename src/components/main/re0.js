@@ -35,7 +35,7 @@ class re0 extends Component {
       <div>
       {this.state.dataready?(<div className="content"> 
       <div className="content2"><h1>{this.state.residentEvil0.name.slice(0, 15)} (2002)</h1> 
-      {this.state.residentEvil0.description_raw}
+      {this.state.residentEvil0.description_raw.slice(544,1402)}
       <p>Achivements: {this.state.residentEvil0.achievements_count}</p>
       <p>Available on:{this.state.residentEvil0.stores[0].store.name}</p>
       <button><Link to="/main">&laquo; Back</Link></button>
@@ -45,7 +45,7 @@ class re0 extends Component {
       <video autoPlay muted loop id="myVideo">
           <source src={this.state.residentEvil0?.clip?.clip} type="video/mp4"/>
       </video>
-      </div>):("loading...")}
+      </div>):<img src="./images/jill.gif" alt="loading"/>}
      
       </div>
     );

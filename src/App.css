@@ -8,7 +8,7 @@
   height: 80px;
 }
 #myVideo {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   right: 0;
   bottom: 0;
@@ -18,6 +18,7 @@
 .Navbar{
 z-index: 100;
 position: relative;
+background-color: #000;
 }
 /* Add some content at the bottom of the video/page */
 .content {
@@ -49,6 +50,16 @@ position: relative;
   color: #f1f1f1;
   padding: 20px;
 }
+
+.zombie { 
+    position: absolute;
+    z-index: 0;
+    bottom: 119px;
+    left: 119px;
+    width: 32%;
+    padding: 20px;
+
+} 
 
 ul,li
 {
@@ -91,8 +102,18 @@ list-style-type: none;
 .App-intro {
   font-size: large;
 }
-
+makeStyles-toolbar-5{
+  background-image: "/dc.png";
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.pin{
+  background:red;
+  width:10px;
+  height:10px;
+  border-radius:100%;
+  pointer-events: none;
 }
